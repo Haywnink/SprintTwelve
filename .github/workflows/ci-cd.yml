@@ -24,6 +24,9 @@ jobs:
       - name: Получить зависимости
         run: go mod tidy
 
+      - name: Запустить линтеры
+        run: go vet ./...
+
       - name: Запустить тесты
         run: go test -v ./...
 
